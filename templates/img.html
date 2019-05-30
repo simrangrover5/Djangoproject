@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+  </head>
+  <body style="background-image: url('../static/images/bg.jpg')">
+<div class="login-box">
+  <h1>Send File</h1>
+  {% if error %}
+  <h1>{{ error }}</h1>
+  {% endif %}
+  <form method="post" action="/img1/" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="textbox">
+    <i class="fas fa-user"></i>
+    <input type="text" placeholder="Receiver Email" name="Email">
+  </div>
+
+  <div class="textbox">
+    <i class="fas fa-user"></i>
+    <textarea rows = "5" cols = "50" name = "Description" style="background: #4190C5;">DESCRIPTION HERE</textarea>
+  </div>
+
+  <div class="textbox">
+    <i class="fas fa-lock"></i>
+    <input type="file" name="Myfile">
+  </div>
+  <input type="submit" value="SUBMIT" style="border: none;color:blue;font-size:20px">
+</form>
+
+</div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title></title>
+	{% load static %}
+	<link rel = "stylesheet" type="text/css" href="{% static 'style3.css' %}">
+</head>
+<body style="background-image: url('../static/images/3.jpg') no-repeat;">
+<div class="wrapper">
+
+	<header>
+		<h1>Choose your option to upload</h1>
+	</header>
+		
+<section class="columns">
+	
+	<div class="column">
+		<h2>1st Option</h2>
+		<p><a href="/imge/">IMAGE</a></p>
+	</div>
+	
+	<div class="column">
+		<h2>2nd Option</h2>
+		<p><a href="/pdf/">PDF or DOC</a></p>
+	</div>
+  
+  	<div class="column">
+		<h2>3rd Option</h2>
+		<p><a href="/ppt/">PPT</a></p>
+	</div>
+	
+</section>	
+<a href="/sendmail/">SEND MAIL?</a>
+</div>

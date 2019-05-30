@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+  </head>
+  <body style="background-image: url('../static/images/bg.jpg')">
+<div class="login-box">
+  <h1>EMAIL VERIFICATION</h1>
+  {% if error %}
+  <h1>{{ error }}</h1>
+  {% endif %}
+  <form method="post" action="/verify/">
+    {% csrf_token %}
+  <div class="textbox">
+    <i class="fas fa-lock"></i>
+    <input type="text" placeholder="OTP" name="otp1">
+  </div>
+  <input type="submit" value="SUBMIT" style="border: none;color:blue;font-size:20px">
+</form>
+</div>
+  </body>
+</html>

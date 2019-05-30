@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>DATA</title>
+</head>
+<body style="background-image:url('../static/images/3.jpg')">
+	<h1 style="color:#4C3E3B;font-size: 30px;">DATA SEND</h1>
+	{% for i in data %}
+	<div style='padding-top:10px;'>
+	<h1> {{ i.receiver }}</h1>
+	<p style="font-size: 50px"> {{ i.description }}</p>
+	<img src="{{ i.image }}" height="180px" width="200px">
+	{% endfor %}
+	{% for j in fdata %}
+	<div style='padding-top:10px;'>
+	<h1> {{ j.receiver1 }}</h1>
+	<p style="font-size: 50px"> {{ j.description1 }}</p>
+	<a style="font-size: 40px" href="{{ j.file }}">FILE</a>
+	{% endfor %}
+	</div>
+	<h1 style="color:#4C3E3B;font-size: 30px;">DATA RECEIVE</h1>
+	{% for i in data1 %}
+	<div style='padding-top:10px;'>
+	<h1> {{ i.sender }}</h1>
+	<p style="font-size: 50px"> {{ i.description }}</p>
+	<img src="{{ i.image }}" height="180px" width="200px">
+	{% endfor %}
+	{% for i in fdata1 %}
+	<div style='padding-top:10px;'>
+	<h1> {{ i.sender1 }}</h1>
+	<p style="font-size: 50px"> {{ i.description1 }}</p>
+	<a style="font-size: 40px" href="{{ i.file }}">FILE</a>
+	{% endfor %}
+	</div>
+</body>
+</html>

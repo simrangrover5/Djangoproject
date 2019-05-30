@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Signup Form</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}">
+</head>
+<body style="background-image: url('../static/images/bg.jpg')">
+	<h1>Signup Form</h1>
+	<div class="register">
+		{% if error %}
+		<h1 style="color:red;font-size:20px">{{ error }}
+		{% endif %}
+	<form method="post" id="register" action="/signup1/">
+		{% csrf_token %}
+		<h2>Signup here</h2>
+		<label>First Name :</label><br>
+		<input type="text" name="FirstName" value="{{ FirstName }}" id="name" placeholder="Enter your first name"><br><br>
+		<label>Last Name :</label><br>
+		<input type="text" name="LastName" value="{{ LastName }}" id="name" placeholder="Enter your last name"><br><br>
+		<label>Email :</label><br>
+		<input type="email" name="Email" value = "{{ Email }}" placeholder="Enter your  email" id="name"><br><br>
+		<label>Password :</label><br>
+		<input type="password" name="Password" placeholder="Enter your password" id="name"><br><br>
+		<label>Confirm Password :</label><br>
+		<input type="password" name="Cpassword" placeholder="Enter your password again" id="name"><br><br>
+		<input type="radio" name="male" id="male"><span id="male">&nbsp;Male</span>&nbsp;&nbsp;
+		<input type="radio" name="male" id="male"><span id="male">&nbsp;Female</span>&nbsp;&nbsp;<br><br>
+		<input type="submit" value="SUBMIT" id="sub">
+		</form>
+		</div>
+</body>
+</html>
+		
+			
+
+		
